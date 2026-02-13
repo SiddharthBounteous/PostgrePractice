@@ -1,0 +1,76 @@
+database server(hardware and software) used to run database:  backend portion of database application
+
+field,table, column
+record->entire dataset
+view->virtual tables(practice it!!)
+why we need view?
+-> to restrict the data accessibility
+-> reducing redundant view
+
+conceptual data model-> identifies highest level of relationship between different entities.
+Logical data model-> includes all entites and relationship among them(normalization occurs here)
+- resolve many-to-many relationships
+- find all attributes for each entites
+Physical data model-> how the model will be built in database.(demnormalization may be there  based on user requirements)
+
+Acid properties(Atomicity, Consistency, Isolation, Durability)
+
+Stored procedure:
+1. used for one shot
+(can contain business logic)
+
+syntax:
+create procedure procedure_name [ (parameter datatype [,parameter datatype])] 
+begin
+declaration_section
+executable_section
+end;
+
+call procedure:
+
+call procedure_name (@variable_name)
+select @variable_name
+
+drop procedure (if exists) procedure_name;
+
+
+
+summarizing the data:
+select aggregate_func ((All|distinct) expression) from table_name
+
+grouping data:
+select column_list from table_name where condition [group by [all] expression ,[expression]] having search_condition
+
+A   B
+1   1  
+1   2  
+1   3
+2   2
+3   
+
+Inner join= 6 records
+left outer join= 6 records
+right outer join=7 records
+
+A   B
+1   1  
+1   2  
+1   3
+2   2
+3
+4   5
+full outer join= 9 
+cross join=
+
+create temporary table  new_table_name  as (select c1,c2,.... from old_table_name)
+creating it for limited purpose (need not to be stored for longer time)
+
+alter view view_name as select columns from tables [where conditions]
+
+create [or replace] view view_name as select columns from tables [where conditions]
+(dbms only updates meta data)
+
+
+
+
+
