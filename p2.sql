@@ -122,4 +122,4 @@ select s.first_name,s.last_name,d.department_name,a.city from student s join dep
 select s.first_name, s.last_name, d.department_name, a.street_address, a.city, a.state, a.postal_code
 from student s join department d  on s.department_id = d.department_id join address a on s.address_id = a.address_id where s.first_name ilike 'John';
 
--- 
+-- students , , marks, semesters
